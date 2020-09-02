@@ -1,0 +1,39 @@
+<mat-dialog-content>
+    <div class="text-center">
+        <p class="text-danger"> {{message}}</p>
+    </div>
+    <div class="row">
+        <div class="col-6 border-col">
+            <h3 class="mb-0">SMS</h3>
+            <hr class="my-2" />
+            <mat-form-field class="w-100" color="accent">
+                <mat-label>Add a messeage...</mat-label>
+                <textarea matInput [(ngModel)]="sms" name="sms"></textarea>
+                <mat-hint align="end">
+                    <span *ngIf="sms">
+                        {{sms.length}}
+                    </span>
+                </mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <h3 class="mb-0">Email</h3>
+            <hr class="my-2" />
+            <mat-form-field color="accent" appearance="legacy" class="w-50">
+                <mat-label>Add a subject line...</mat-label>
+                <input matInput type="text" name="subject" [(ngModel)]="subject">
+            </mat-form-field>
+            <mat-form-field class="w-100" color="accent">
+                <mat-label>Add a messeage...</mat-label>
+                <textarea matInput [(ngModel)]="email" name="email"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end" class="mb-2">
+    <button mat-raised-button [mat-dialog-close]="true" style="width: 200px;" cdkFocusInitial
+        color="primary">Cancel</button>
+    <button mat-raised-button type="button" color="accent" style="width: 200px;" (click)="send()">
+        Send
+    </button>
+</mat-dialog-actions>

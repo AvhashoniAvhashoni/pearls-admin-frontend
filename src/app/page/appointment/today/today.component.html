@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-4 p-2" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+        <mdb-card>
+            <mdb-card-body class="p-0">
+                <div class="px-3 pt-3 pb-0">
+                    <mdb-card-title class="text-center">
+                        <h2>Name Surname</h2>
+                    </mdb-card-title>
+                    <mdb-card-text class="p-0">
+                        <h3 class="m-0">
+                            <span>Request date:</span> 27 June 16:00
+                            <br />
+                            <span>Service:</span> Face Lift
+                        </h3>
+                    </mdb-card-text>
+                </div>
+                <hr class="m-0" />
+                <div class="row text-center">
+                    <div class="col-6 p-3" matRipple matRippleCentered="centered">
+                        <strong>Confirm</strong>
+                    </div>
+                    <div class="col p-3" matRipple matRippleCentered="centered">
+                        <strong>Postpone</strong>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+    </div>
+</div>

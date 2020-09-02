@@ -1,0 +1,25 @@
+mat-drawer-container {
+    height: 100vh;
+
+    mat-drawer {
+        width              : 225px;
+        background-image   : url("https://images.pexels.com/photos/4584968/pexels-photo-4584968.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        background-position: bottom center;
+        background-size    : cover;
+        background-repeat  : no-repeat;
+
+        i {
+            font-size: 18px;
+            padding-top: 4px;
+        }
+    }
+}
+
+.row_active {
+    background-color: #ddd;
+    color: #ff4081;
+
+    h3 {
+        color: #ff4081;
+    }
+}

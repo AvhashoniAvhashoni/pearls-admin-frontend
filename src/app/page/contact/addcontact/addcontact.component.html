@@ -1,0 +1,122 @@
+<div class="row">
+    <div class="col my-5">
+        <mdb-card class="p-3">
+            <form [formGroup]="customer" (ngSubmit)="addContact()">
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="standard" class="w-100">
+                            <mat-label>First Name</mat-label>
+                            <input matInput type="text" name="first_name" formControlName="first_name">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="standard" class="w-100">
+                            <mat-label>Surname</mat-label>
+                            <input matInput type="text" name="last_name" formControlName="last_name">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="standard" class="w-100">
+                            <mat-label>Commonly known as</mat-label>
+                            <input matInput type="text" name="nick_name" formControlName="nick_name">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" name="email" formControlName="email">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>Cell Number</mat-label>
+                            <span matPrefix>+27 &nbsp;</span>
+                            <input matInput type="tel" name="cell" formControlName="cell" placeholder="71 234 5678"
+                                (input)="cellNumberFormat()" maxlength="11">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>Next of Kin Cell Number</mat-label>
+                            <span matPrefix>+27 &nbsp;</span>
+                            <input matInput type="tel" name="next_of_kin_cell" formControlName="next_of_kin_cell"
+                                placeholder="71 234 5678" (input)="cellNumberFormat()" maxlength="11">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>Address line 1</mat-label>
+                            <input matInput type="text" name="address_line_1" formControlName="address_line_1">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>Address line 2</mat-label>
+                            <input matInput type="text" name="address_line_2" formControlName="address_line_2">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>City</mat-label>
+                            <input matInput type="text" name="city" formControlName="city">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col-5">
+                        <mat-form-field color="accent" class="w-100">
+                            <mat-label>Province</mat-label>
+                            <mat-select name="province" formControlName="province">
+                                <mat-option *ngFor="let p of province" [value]="p">
+                                    {{p}}
+                                </mat-option>
+                            </mat-select>
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>Zip Code</mat-label>
+                            <input matInput type="text" name="zip_code" formControlName="zip_code">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-4">
+                        <mat-form-field color="accent" appearance="legacy" class="w-100">
+                            <mat-label>Date of Birth</mat-label>
+                            <input matInput type="date" name="date_of_birth" formControlName="date_of_birth">
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col pt-3 text-right">
+                        <mat-checkbox name="subscribe" formControlName="subscribe">
+                            Subscribe to receive notifications
+                        </mat-checkbox>
+                    </div>
+                </div>
+                <div class="row justify-content-center my-3">
+                    <div class="col-4">
+                        <button mat-raised-button type="submit" color="accent" class="w-100">
+                            Add contact
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </mdb-card>
+    </div>
+</div>

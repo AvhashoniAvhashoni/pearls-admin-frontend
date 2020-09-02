@@ -1,0 +1,21 @@
+<button mat-icon-button class="float-right pr-2" (click)="addAppointment">
+    <mat-icon color="accent">add_circle_outline</mat-icon>
+</button>
+<h1>Appointment</h1>
+<mat-tab-group mat-align-tabs="start" color="accent">
+    <mat-tab label="Today">
+        <div class="my-3">
+            <app-today></app-today>
+        </div>
+    </mat-tab>
+    <mat-tab label="Upcomming">
+        <div class="my-5">
+            <app-upcomming></app-upcomming>
+        </div>
+    </mat-tab>
+    <mat-tab label="Past">
+        <div class="my-3">
+            
+        </div>
+    </mat-tab>
+</mat-tab-group>
